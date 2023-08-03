@@ -99,14 +99,12 @@ export default function CaseBox(props) {
         const items2 = document.querySelectorAll('.item-2');
         const items3 = document.querySelectorAll('.item-3');
         const items4 = document.querySelectorAll('.item-4');
-        const items5 = document.querySelectorAll('.item-5');
         const items6 = document.querySelectorAll('.item-6');
 
         gsap.set('.image-reveal', { opacity: 0, x: -30, zIndex: 0 });
         gsap.set('.image-reveal-2', { opacity: 0, x: -30, zIndex: -1 });
         gsap.set('.image-reveal-3', { opacity: 0, x: -30, zIndex: -1 });
         gsap.set('.image-reveal-4', { opacity: 0, x: -30, zIndex: -1 });
-        gsap.set('.image-reveal-5', { opacity: 0, x: -30, zIndex: -1 });
         gsap.set('.image-reveal-6', { opacity: 0, x: -30, zIndex: -1 });
 
         items.forEach((el) => {
@@ -172,21 +170,7 @@ export default function CaseBox(props) {
 
         });
 
-        items5.forEach((el5) => {
-
-            el5.addEventListener('mouseenter', (e) => {
-                gsap.to('.image-reveal-5', { opacity: 1, x: 10, zIndex: 99, ease: 'power1.in', });
-            });
-
-            el5.addEventListener('mouseleave', (e) => {
-                gsap.to('.image-reveal-5', { x: -20, opacity: 0 });
-            });
-
-            el5.addEventListener('mousemove', (e) => {
-                gsap.set('.image-reveal-5', { x: 0 });
-            });
-
-        });
+       
 
         items6.forEach((el6) => {
 
@@ -205,7 +189,7 @@ export default function CaseBox(props) {
         });
 
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 767);
+            setIsMobile(window.innerWidth <= 1080);
         };
 
         // Add event listener for window resize
@@ -242,11 +226,6 @@ export default function CaseBox(props) {
                 el4.removeEventListener('mouseleave', () => { });
                 el4.removeEventListener('mousemove', () => { });
             });
-            items5.forEach((el5) => {
-                el5.removeEventListener('mouseenter', () => { });
-                el5.removeEventListener('mouseleave', () => { });
-                el5.removeEventListener('mousemove', () => { });
-            });
             items6.forEach((el6) => {
                 el6.removeEventListener('mouseenter', () => { });
                 el6.removeEventListener('mouseleave', () => { });
@@ -266,7 +245,7 @@ export default function CaseBox(props) {
         <Grid container rowSpacing={1} ref={Trigger}>
 
             <Grid item md={6} style={{ alignItems: 'center', display: 'flex', width: `${isMobile ? '100%' : 'initial'}` }}>
-                <Link href='#' style={{ width: `${isMobile ? '100%' : '80%'}` }}>
+                <Link href='javascript:void(0)' style={{ width: `${isMobile ? '100%' : '80%'}` }}>
                     <Card width={30} sx={{ padding: '.9375rem 1rem', boxShadow: 3, display: 'flex', flexDirection: `${isMobile ? 'column' : 'row'}`, alignItems: 'center', justifyContent: 'space-between', width: '100%', /* height: '4.5rem', */ backgroundColor: `${props.backgroundColor ? props.backgroundColor : '#ebefff0'}`, borderRadius: '0', boxShadow: 'none', margin: `${props.margin}`, borderTop: '0.5px solid #666', borderBottom: '0.5px solid #666' }} className="item">
                         <SubTitle fontSize={'1.2rem'} sx={{ width: `${isMobile ? '90%' : '30%'}`, textAlign: `${isMobile ? 'center' : 'initial'}` }}>Dados pela saúde (data for health)</SubTitle>
                         <ContentWrap>
@@ -336,7 +315,7 @@ export default function CaseBox(props) {
             </Grid>
 
             <Grid item md={6} style={{ alignItems: 'center', display: 'flex', width: `${isMobile ? '100%' : 'initial'}` }}>
-                <Link href='#' style={{ width: `${isMobile ? '100%' : '80%'}` }}>
+                <Link href='https://opabier.com.br/' target="blank" style={{ width: `${isMobile ? '100%' : '80%'}` }}>
                     <Card width={30} sx={{ padding: '.9375rem 1rem', boxShadow: 3, display: 'flex', flexDirection: `${isMobile ? 'column' : 'row'}`, alignItems: 'center', justifyContent: 'space-between', width: '100%', /* height: '4.5rem', */ backgroundColor: `${props.backgroundColor ? props.backgroundColor : '#ebefff0'}`, borderRadius: '0', boxShadow: 'none', margin: `${props.margin}`, borderTop: '0.5px solid #666', borderBottom: '0.5px solid #666' }} className="item-3">
                         <SubTitle fontSize={'1.2rem'} sx={{ width: `${isMobile ? '90%' : '30%'}`, textAlign: `${isMobile ? 'center' : 'initial'}` }}>OpaBier</SubTitle>
                         <ContentWrap>
@@ -381,7 +360,7 @@ export default function CaseBox(props) {
             </Grid>
 
             <Grid item md={6} style={{ alignItems: 'center', display: 'flex', width: `${isMobile ? '100%' : 'initial'}` }}>
-                <Link href='#' style={{ width: `${isMobile ? '100%' : '80%'}` }}>
+                <Link href='https://digix.com.br/' target="blank" style={{ width: `${isMobile ? '100%' : '80%'}` }}>
                     <Card width={30} sx={{ padding: '.9375rem 1rem', boxShadow: 3, display: 'flex', flexDirection: `${isMobile ? 'column' : 'row'}`, alignItems: 'center', justifyContent: 'space-between', width: '100%', /* height: '4.5rem', */ backgroundColor: `${props.backgroundColor ? props.backgroundColor : '#ebefff0'}`, borderRadius: '0', boxShadow: 'none', margin: `${props.margin}`, borderTop: '0.5px solid #666', borderBottom: '0.5px solid #666' }} className="item-4">
                         <SubTitle fontSize={'1.2rem'} sx={{ width: `${isMobile ? '90%' : '30%'}`, textAlign: `${isMobile ? 'center' : 'initial'}` }}>Digix</SubTitle>
                         <ContentWrap>
@@ -414,43 +393,10 @@ export default function CaseBox(props) {
                 />
             </Grid>
 
-            <Grid item md={6} style={{ alignItems: 'center', display: 'flex', width: `${isMobile ? '100%' : 'initial'}` }}>
-                <Link href='#' style={{ width: `${isMobile ? '100%' : '80%'}` }}>
-                    <Card width={30} sx={{ padding: '.9375rem 1rem', boxShadow: 3, display: 'flex', flexDirection: `${isMobile ? 'column' : 'row'}`, alignItems: 'center', justifyContent: 'space-between', width: '100%', /* height: '4.5rem', */ backgroundColor: `${props.backgroundColor ? props.backgroundColor : '#ebefff0'}`, borderRadius: '0', boxShadow: 'none', margin: `${props.margin}`, borderTop: '0.5px solid #666', borderBottom: '0.5px solid #666' }} className="item-5">
-                        <SubTitle fontSize={'1.2rem'} sx={{ width: `${isMobile ? '90%' : '30%'}`, textAlign: `${isMobile ? 'center' : 'initial'}` }}>Audiency</SubTitle>
-                        <ContentWrap>
-                            <ContentWrap sx={{ marginBottom: '1rem', flexDirection: `${isMobile ? 'column' : 'row'}`, gap: '.625rem', display: 'flex', width: `${isMobile ? '100%' : '25rem'}`, alignItems: 'center', justifyContent: 'space-between' }}>
-                                <Paragraph>Technologies:</Paragraph>
-                                <ContentWrap sx={{ display: 'flex', alignItems: 'center', alignItems: 'center', justifyContent: 'space-between', gap: '.625rem' }}>
-                                    <Chip label={'next.js'} variant="outlined" style={{ color: '#fff' }} />
-                                    <Chip label={'react.js'} variant="outlined" style={{ color: '#fff' }} />
-                                    <Chip label={'css-in-js'} variant="outlined" style={{ color: '#fff' }} />
-                                </ContentWrap>
-                            </ContentWrap>
-                            <ContentWrap sx={{ flexDirection: 'row', gap: '.625rem', display: 'flex', flexDirection: `${isMobile ? 'column' : 'row'}`, alignItems: 'center', justifyContent: 'space-between', width: `${isMobile ? '100%' : '25rem'}` }}>
-                                <Paragraph>worked with:</Paragraph>
-                                <ContentWrap sx={{ display: 'flex', alignItems: 'center', alignItems: 'center', justifyContent: 'space-between', gap: '.625rem' }}>
-                                    <Chip label={'Audiency.io'} variant="outlined" style={{ color: '#fff' }} />
-                                </ContentWrap>
-                            </ContentWrap>
-                        </ContentWrap>
-
-                    </Card>
-
-                </Link>
-            </Grid>
-            <Grid item md={6} style={{ alignItems: 'center', display: 'flex', position: 'relative' }}>
-                <Image
-                    alt={'project'}
-                    src={Audiency}
-                    quality={100}
-                    style={{ width: '70%', height: 'auto', position: 'absolute', opacity: '0', zIndex: '0' }}
-                    className={`image-reveal-5`}
-                />
-            </Grid>
+            
 
             <Grid item md={6} style={{ alignItems: 'center', display: 'flex', width: `${isMobile ? '100%' : 'initial'}` }}>
-                <Link href='#' style={{ width: `${isMobile ? '100%' : '80%'}` }}>
+                <Link href='https://lemonadde.com.br/' target="blank" style={{ width: `${isMobile ? '100%' : '80%'}` }}>
                     <Card width={30} sx={{ padding: '.9375rem 1rem', boxShadow: 3, display: 'flex', flexDirection: `${isMobile ? 'column' : 'row'}`, alignItems: 'center', justifyContent: 'space-between', width: '100%', /* height: '4.5rem', */ backgroundColor: `${props.backgroundColor ? props.backgroundColor : '#ebefff0'}`, borderRadius: '0', boxShadow: 'none', margin: `${props.margin}`, borderTop: '0.5px solid #666', borderBottom: '0.5px solid #666' }} className="item-6">
                         <SubTitle fontSize={'1.2rem'} sx={{ width: `${isMobile ? '90%' : '30%'}`, textAlign: `${isMobile ? 'center' : 'initial'}` }}>Lemonadde</SubTitle>
                         <ContentWrap>

@@ -113,9 +113,15 @@ a {
 }
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1140px) {
   html {
     font-size: 15px;
+  }
+}
+
+@media (min-width: 1141px) and (max-width: 1500px) {
+  html {
+    font-size: 14px;
   }
 }
 

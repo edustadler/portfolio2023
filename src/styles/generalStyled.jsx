@@ -149,7 +149,7 @@ export const FrameScreen = styled('div')(
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        bottom: '0',
+        bottom: '3.375rem',
         transform: 'translateY(50%)',
         boxShadow: 'inset 0px 0px 16px 9px rgba(0, 0, 0, .4)'
         
