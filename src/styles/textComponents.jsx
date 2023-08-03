@@ -2,46 +2,50 @@ import { Padding } from "@mui/icons-material";
 import { styled } from "@mui/system";
 
 export const Title = styled('h1')(
-    ({ color, fontSize, lineHeight, marginBottom, backgroundImage }) => ({
+    ({ color, fontSize, lineHeight, marginBottom, mobileFontSize, width, height, wordBreak, letterSpacing }) => ({
         fontFamily: 'Poppins',
         fontSize,
         transition: 'ease all 500ms',
-        color: color,
+        color: color || '#e6dcd1',
         lineHeight: lineHeight ? lineHeight : '3rem',
         marginBottom: marginBottom ? marginBottom : '1.5625rem',
-        backgroundColor: '#fff',
-        WebkitBackgroundImage: 'gradient(linear,left top,right top,from(#0d99ff),to(#99faf4))',
-        backgroundImage: backgroundImage ? backgroundImage :'linear-gradient(180deg,#0d99ff 0%,#111499 100%)',
-        backgroundClip: 'text',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-
-
-
-        '&:hover': {
-            color: "#ff5200"
+        width,
+        height,
+        wordBreak,
+        letterSpacing,
+        '@media (max-width: 768px)': {
+            fontSize: mobileFontSize
         }
+        
     })
 )
 
 export const SubTitle = styled('h2')(
-    ({color}) => ({
-        color: color ? color : '#fff'
+    ({fontSize, color}) => ({
+        color: color ? color : '#e6dcd1',
+        fontSize,
     })
 )
 
 export const Paragraph = styled('p') (
-    ({ color, fontSize, lineHeight }) => ({
-        color: color ? color : '#3d3d3d',
+    ({ color, fontSize, lineHeight, textAlign, opacity, mobileFontSize }) => ({
+        color: color ? color : '#e3d6be',
         fontSize,
-        lineHeight
+        lineHeight,
+        textAlign,
+        opacity,
+        /* transform: 'translateY(45px)' */
+
+        '@media (max-width: 768px)': {
+            fontSize: mobileFontSize
+        }
     })
 )
 
 export const OverTitle = styled('span')(
     ({color}) => ({
-        color: color ? color : '#ffd687',
-        marginBottom: '.9375rem'
+        color: color ? color : '#ffbf13',
+        marginBottom: '.9375rem',
     })
 )
 

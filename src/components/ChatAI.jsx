@@ -1,7 +1,7 @@
 import { BotChatAlign, ButtonChat, ChatScreen, PaperBot, PaperUser, UserChatAlign } from "@/styles/generalStyled";
 import { Paragraph, TextArea } from "@/styles/textComponents";
 import { Paper, } from "@mui/material";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function ChatAI() {
     const [question, setQuestion] = useState('')

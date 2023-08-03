@@ -1,3 +1,4 @@
+import React from "react";
 import CardImage from "@/components/CardImage";
 import { MainContainer, Section } from "@/styles/generalStyled";
 import { SubTitle } from "@/styles/textComponents";
@@ -39,23 +40,23 @@ export default function Jobs() {
     return (<>
         <Section>
             <MainContainer justify="center" sx={{ marginBottom: '6.25rem' }}>
-                <SubTitle>Some jobs</SubTitle>
+                <SubTitle>Already worked</SubTitle>
             </MainContainer>
-            <Marquee speed={300} gradient={false} direction={'left'} pauseOnHover={true} style={{display: 'flex', gap: '50px'}}>
+            <Marquee speed={300} gradient={false} direction={'left'} pauseOnHover={false} style={{display: 'flex', gap: '50px'}}>
                 {
                     Logos.map(
                         (logo, index) => 
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 2.075rem'}}>
+                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 2.075rem'}} key={index}>
                             <Image src={logo.url} width={150} style={{ position: 'relative', width: '100%', height: '110px', objectFit: 'none' }} quality={100} />                            
                         </Box>
                     )
                 }                
             </Marquee>
-            <Marquee speed={280} gradient={false} direction={'right'} pauseOnHover={true} style={{display: 'flex', gap: '50px'}}>
+            <Marquee speed={280} gradient={false} direction={'right'} pauseOnHover={false} style={{display: 'flex', gap: '50px'}}>
                 {
                     Logos.map(
                         (logo, index) => 
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 2.075rem'}}>
+                        <Box  key={index} sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 2.075rem'}}>
                             <Image src={logo.url} width={150} style={{ position: 'relative', width: '100%', height: '110px', objectFit: 'none' }} quality={100} />                            
                         </Box>
                     )

@@ -1,13 +1,12 @@
-import { Roboto } from 'next/font/google';
+// theme.jsx
 import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
-export const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['Helvetica', 'Arial', 'sans-serif'],
-});
+// Import the fonts as CSS strings
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 // Create a theme instance.
 const theme = createTheme({
@@ -23,7 +22,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: 'Roboto',
     fontSize: 16
 
   },
