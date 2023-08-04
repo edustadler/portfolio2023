@@ -112,11 +112,6 @@ a {
   text-decoration: none;
 }
 
-@media (min-width: 798px) and (max-width: 1180px) {
-  html {
-    font-size: 12px;
-  }
-}
 
 @media(max-width: 1180px) {
   #root canvas {
@@ -136,6 +131,12 @@ a {
 @media (min-width: 1181px) and (max-width: 1300px) {
   html {
     font-size: 14px;
+  }
+}
+
+@media (min-width: 798px) and (max-width: 1180px) {
+  html {
+    font-size: 12px;
   }
 }
 
