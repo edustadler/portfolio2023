@@ -11,6 +11,7 @@ import Kumulus from '../../images/kumulus.png'
 import Labbo from '../../images/labbo.png'
 import Logicalis from '../../images/logicalis.png'
 import Vivo from '../../images/vivo.png'
+import { Contact } from "./Contact";
 
 
 export default function Jobs() {
@@ -63,5 +64,6 @@ export default function Jobs() {
                 }                
             </Marquee>
         </Section>
+        <Contact/>
     </>)
 }

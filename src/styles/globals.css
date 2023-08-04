@@ -91,7 +91,6 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
   font-size: 16px;
 }
 
@@ -105,7 +104,7 @@ h2 {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #222224;
+  background: #000;
 }
 
 a {
@@ -120,9 +119,15 @@ a {
   }
 }
 
-@media (min-width: 1141px) and (max-width: 1500px) {
+@media (min-width: 1141px) and (max-width: 1300px) {
   html {
     font-size: 14px;
+  }
+}
+
+@media (min-width: 1301px) and (max-width: 1500px) {
+  html {
+    font-size: 13px;
   }
 }
 

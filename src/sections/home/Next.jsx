@@ -71,19 +71,19 @@ export const ThirdSection = (props) => {
             '.card-reveal div', {
             y: 0,
             opacity: 1,
-            duration: isMobile ? 99 : 80,
+            duration: isMobile ? .9 : .9,
             ease: 'power4.in',
             color: '#fff',
             stagger: {
-                each: isMobile ? 8 : 6,
+                each: isMobile ? .08 : .04,
                 from: "center",
                 grid: "auto",
             },
             scrollTrigger: {
                 trigger: isMobile ? '.padding-control' : '.start-tech',
-                scrub: true,
-                start: 'top 100%',
-                end: isMobile ? 'top 20%' : 'top 30%',
+                scrub: false,
+                start: isMobile ? 'top 85%' : 'top 85%',
+                end: isMobile ? 'top 20%' : 'top 10%',
                 markers: false
             }
         }

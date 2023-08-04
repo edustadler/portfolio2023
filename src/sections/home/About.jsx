@@ -23,15 +23,15 @@ export const SecondSection = (props) => {
         let reveal = gsap.to(wordRefs.current, {
             opacity: 1,
             y: 0,
-            duration: 4,
+            duration: .5,
             ease: 'power4.in',
             color: '#fff',
             stagger: {
-                each: .5,
+                each: .05,
             },
             scrollTrigger: {
                 trigger: '.start',
-                scrub: true,
+                scrub: false,
                 start: 'top 100%',
                 end: 'bottom 60%',
             },

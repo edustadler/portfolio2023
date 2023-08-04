@@ -6,11 +6,12 @@ export const Section = styled('div',
         shouldForwardProp: (prop) => prop !== "width" && prop !== "height" && prop !== "bgColor" && prop !== "bgImage"
     }
 )(
-    ({ width, height, bgColor, padding, paddingMobile }) => ({
+    ({ width, height, bgColor, padding, opacity, paddingMobile }) => ({
         width: width ? width : '100%',
         height: height ? height : "100%",
         background: bgColor ? bgColor : "#000",
         backgroundAttachment: "fixed",
+        opacity,
         padding: padding ? padding : "6.25rem 0",
         '@media (max-width: 768px)': {
             padding: paddingMobile

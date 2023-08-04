@@ -7,6 +7,7 @@ import { Power2, gsap } from "gsap"
 import { Canvas } from "@react-three/fiber"
 import SwipeIcon from '@mui/icons-material/Swipe'
 import Experience from "@/components/3d/Experience"
+import { useLocomotiveScroll } from "react-locomotive-scroll"
 
 
 

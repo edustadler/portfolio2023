@@ -16,8 +16,10 @@ export const Contact = (props) => {
 
     return (<>
         <Section
+            opacity={props.opacity}
+            height={'100%'}
         /* bgColor="radial-gradient(rgb(143 143 143 / 50%), rgb(0 0 0 / 22%))" */
-        /* sx={{padding: "6.250rem 0"}} */
+        sx={{padding: "6.250rem 0"}}
         >
             <MainContainer justify={'space-between'} alignItemsMobile={'baseline'}>
                 <Grid>
