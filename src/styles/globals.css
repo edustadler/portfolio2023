@@ -120,7 +120,7 @@ a {
 @media(max-width: 1180px) {
   #root {
     touch-action: none;
-    pointer-events: none;
+    pointer-events: none !important;
 
   }
   .mobile-none {
