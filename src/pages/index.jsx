@@ -35,7 +35,7 @@ export default function Home() {
         </Head>
 
         <FirstSection
-          overTitle="Interactive front-end"
+          overTitle="Interactive programmer"
           name="Edu Stadler"
         />
         <SecondSection
