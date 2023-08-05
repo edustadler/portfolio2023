@@ -118,7 +118,7 @@ a {
 
 
 @media(max-width: 1180px) {
-  #root canvas {
+  #root {
     touch-action: none;
     pointer-events: none;
 
