@@ -112,13 +112,23 @@ a {
   text-decoration: none;
 }
 
+.mobile-none {
+  display: flex;
+}
+
 
 @media(max-width: 1180px) {
   #root canvas {
     touch-action: none;
     pointer-events: none;
+
+  }
+  .mobile-none {
+    display: none; 
   }
 }
+
+
 
 
 

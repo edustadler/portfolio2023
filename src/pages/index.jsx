@@ -49,6 +49,7 @@ export default function Home() {
         <Case />
         <Jobs />
         <Contact opacity={0}/>
+        <YellowDot/>
       </SmoothScroll>
     </div>
   </>);

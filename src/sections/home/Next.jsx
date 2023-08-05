@@ -175,7 +175,7 @@ export const ThirdSection = (props) => {
                             {title.split('').map((word, index) => (
                                 word === ' '
                                     ?
-                                    <LetterWrap sx={{ clipPath: 'polygon(0 0, 130% 0, 130% 130%, 0% 130%)' }}>
+                                    <LetterWrap sx={{ clipPath: 'polygon(0 0, 130% 0, 130% 130%, 0% 130%)' }} key={index}>
                                         <Title
                                             width={'29.5rem'}
                                             height={'auto'}
@@ -183,7 +183,6 @@ export const ThirdSection = (props) => {
                                             letterSpacing={'-0.8rem'}
                                             lineHeight={'9rem'}
                                             wordBreak={'break-word'}
-                                            key={index}
                                             className="title-tech"
                                             sx={{ width: 'auto' }}
                                         >
@@ -191,7 +190,7 @@ export const ThirdSection = (props) => {
                                         </Title>
                                     </LetterWrap>
                                     :
-                                    <LetterWrap sx={{ clipPath: 'polygon(0 0, 100% 0, 130% 130%, 0% 130%)' }}>
+                                    <LetterWrap sx={{ clipPath: 'polygon(0 0, 100% 0, 130% 130%, 0% 130%)' }} key={index}>
                                         <Title
                                             width={'29.5rem'}
                                             height={'auto'}

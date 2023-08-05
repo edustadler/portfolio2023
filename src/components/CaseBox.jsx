@@ -270,7 +270,7 @@ export default function CaseBox(props) {
 
                 </Link>
             </Grid>
-            <Grid item md={6} style={{ alignItems: 'center', display: 'flex', position: 'relative' }}>
+            <Grid item md={6} style={{ alignItems: 'center', position: 'relative' }} className='mobile-none'>
                 <Image
                     alt={'project-1'}
                     src={Nextjs}
@@ -304,7 +304,7 @@ export default function CaseBox(props) {
 
                 </Link>
             </Grid>
-            <Grid item md={6} style={{ alignItems: 'center', display: 'flex', position: 'relative' }}>
+            <Grid item md={6} style={{ alignItems: 'center', position: 'relative' }} className='mobile-none'>
                 <Image
                     alt={'project-2'}
                     src={Agora}
@@ -338,7 +338,7 @@ export default function CaseBox(props) {
 
                 </Link>
             </Grid>
-            <Grid item md={6} style={{ alignItems: 'center', display: 'flex', position: 'relative' }}>
+            <Grid item md={6} style={{ alignItems: 'center', position: 'relative' }} className='mobile-none'>
                 {
                     visible === true
                         ?
@@ -383,7 +383,7 @@ export default function CaseBox(props) {
 
                 </Link>
             </Grid>
-            <Grid item md={6} style={{ alignItems: 'center', display: 'flex', position: 'relative' }}>
+            <Grid item md={6} style={{ alignItems: 'center', position: 'relative' }} className='mobile-none'>
                 <Image
                     alt={'project-4'}
                     src={Digix}
@@ -419,7 +419,7 @@ export default function CaseBox(props) {
 
                 </Link>
             </Grid>
-            <Grid item md={6} style={{ alignItems: 'center', display: 'flex', position: 'relative' }}>
+            <Grid item md={6} style={{ alignItems: 'center', position: 'relative' }} className='mobile-none'>
                 <Image
                     alt={'project-6'}
                     src={Lemonadde}

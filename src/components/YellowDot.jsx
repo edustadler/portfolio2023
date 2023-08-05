@@ -1,40 +1,36 @@
 import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
 
 const YellowDot = () => {
   const dotRef = useRef();
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 767;
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 767;
 
   useEffect(() => {
     if (!isMobile) {
       const dot = dotRef.current;
 
-      gsap.set(dot, {
-        border: '1px solid red',
-        transformOrigin: '50% 50%',
-        backgroundColor: 'yellow',
-        borderRadius: '50%',
-        width: '50px',
-        height: '50px',
-        position: 'absolute',
-        zIndex: 9999,
-        pointerEvents: 'none',
-        top: 0, // Start offscreen to avoid initial jump
-        left: 0, // Start offscreen to avoid initial jump
-      });
+      dot.style.transformOrigin = '50% 50%';
+      dot.style.backgroundColor = '#ffbf13';
+      dot.style.borderRadius = '50%';
+      dot.style.width = '15px';
+      dot.style.height = '15px';
+      dot.style.position = 'absolute';
+      dot.style.zIndex = '9999';
+      dot.style.opacity = '100%';
+      dot.style.pointerEvents = 'none';
+      dot.style.top = '-100px'; // Start offscreen to avoid initial jump
+      dot.style.left = '-100px'; // Start offscreen to avoid initial jump
+      dot.style.transition = 'transform 80s ease';
+      dot.style.mixBlendMode = 'exclusion'
 
       const updateDotPosition = (event) => {
-        gsap.to(dot, {
-          x: event.clientX,
-          y: event.clientY,
-          duration: 0.6,
-          ease: 'power3',
-        });
+        dot.style.left = event.pageX + 'px'; // Subtract half of the width to center the dot on the cursor
+        dot.style.top = event.pageY + 'px'; // Subtract half of the height to center the dot on the cursor
+        
       };
 
       const handleMouseClick = (event) => {
-        dot.style.left = event.clientX * 2 + 'px';
-        dot.style.top = event.clientY * 2 + 'px';
+        dot.style.left = event.pageX * 1 - 25 + 'px';
+        dot.style.top = event.pageY * 1 - 25 + 'px';
       };
 
       window.addEventListener('mousemove', updateDotPosition);
