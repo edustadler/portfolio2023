@@ -43,27 +43,27 @@ export default function Jobs() {
             <MainContainer justify="center" sx={{ marginBottom: '6.25rem' }}>
                 <SubTitle>Already worked</SubTitle>
             </MainContainer>
-            <Marquee speed={300} gradient={false} direction={'left'} pauseOnHover={false} style={{display: 'flex', gap: '50px'}}>
+            <Marquee speed={300} gradient={false} pauseOnHover={false}/*  style={{display: 'flex', gap: '50px'}} */>
                 {
                     Logos.map(
-                        (logo, index) => 
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 2.075rem'}} key={index}>
-                            <Image src={logo.url} width={150} style={{ position: 'relative', width: '100%', height: '110px', objectFit: 'none' }} quality={100} />                            
-                        </Box>
+                        (logo, index) =>
+                            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 2.075rem' }} key={index}>
+                                <Image src={logo.url} width={150} style={{ position: 'relative', width: '100%', height: '110px', objectFit: 'none' }} quality={100} />
+                            </Box>
                     )
-                }                
+                }
             </Marquee>
-            <Marquee speed={280} gradient={false} direction={'right'} pauseOnHover={false} style={{display: 'flex', gap: '50px'}}>
+            <Marquee speed={300} gradient={false} direction={'right'} pauseOnHover={false} style={{ display: 'flex', gap: '50px' }}>
                 {
                     Logos.map(
-                        (logo, index) => 
-                        <Box  key={index} sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 2.075rem'}}>
-                            <Image src={logo.url} width={150} style={{ position: 'relative', width: '100%', height: '110px', objectFit: 'none' }} quality={100} />                            
-                        </Box>
+                        (logo, index) =>
+                            <Box key={index} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 2.075rem' }}>
+                                <Image src={logo.url} width={150} style={{ position: 'relative', width: '100%', height: '110px', objectFit: 'none' }} quality={100} />
+                            </Box>
                     )
-                }                
+                }
             </Marquee>
         </Section>
-        <Contact/>
+        <Contact />
     </>)
 }
