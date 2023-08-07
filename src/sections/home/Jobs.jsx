@@ -48,7 +48,7 @@ export default function Jobs() {
                     Logos.map(
                         (logo, index) =>
                             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 2.075rem' }} key={index}>
-                                <Image src={logo.url} width={150} style={{ position: 'relative', width: '100%', height: '110px', objectFit: 'none' }} quality={100} />
+                                <Image loading="lazy" src={logo.url} width={150} style={{ position: 'relative', width: '100%', height: '110px', objectFit: 'none' }} quality={100} />
                             </Box>
                     )
                 }
@@ -58,7 +58,7 @@ export default function Jobs() {
                     Logos.map(
                         (logo, index) =>
                             <Box key={index} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 2.075rem' }}>
-                                <Image src={logo.url} width={150} style={{ position: 'relative', width: '100%', height: '110px', objectFit: 'none' }} quality={100} />
+                                <Image loading="lazy" src={logo.url} width={150} style={{ position: 'relative', width: '100%', height: '110px', objectFit: 'none' }} quality={100} />
                             </Box>
                     )
                 }
