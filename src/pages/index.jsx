@@ -47,8 +47,8 @@ export default function Home() {
           name="Technologies"
         />
         <Case />
-        <Jobs />
-        <Contact opacity={0}/>
+        {/* <Jobs /> */}
+        <Contact/>
         <YellowDot/>
       </SmoothScroll>
     </div>
