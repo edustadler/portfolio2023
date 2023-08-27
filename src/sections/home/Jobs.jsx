@@ -43,7 +43,7 @@ export default function Jobs() {
             <MainContainer justify="center" sx={{ marginBottom: '6.25rem' }}>
                 <SubTitle>Already worked</SubTitle>
             </MainContainer>
-            <Marquee delay={0} speed={300} gradient={false} pauseOnHover={false}/*  style={{display: 'flex', gap: '50px'}} */>
+            <Marquee delay={0} speed={900} gradient={false} pauseOnHover={false}/*  style={{display: 'flex', gap: '50px'}} */>
                 {
                     Logos.map(
                         (logo, index) =>
@@ -53,7 +53,7 @@ export default function Jobs() {
                     )
                 }
             </Marquee>
-            <Marquee delay={0} speed={300} gradient={false} direction={'right'} pauseOnHover={false} style={{ display: 'flex', gap: '50px' }}>
+            <Marquee delay={1} speed={900} gradient={false} direction={'right'} pauseOnHover={false} style={{ display: 'flex', gap: '50px' }}>
                 {
                     Logos.map(
                         (logo, index) =>
